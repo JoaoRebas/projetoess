@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\AlarmMovimento1;
 use App\AlarmMovimento2;
 use App\AlarmFlame;
