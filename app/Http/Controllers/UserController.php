@@ -28,7 +28,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-      //
+        //
     }
 
     /**
@@ -50,8 +50,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-      $user = Auth::user();
-      return view('users.profile', compact('user'));
+      //$user = Auth::user();
+      return view('profile', compact('user'));
     }
 
     /**
@@ -61,18 +61,12 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(User $user)
+    public function update(Request $request, User $user)
     {
-      $this->validate(request(), [
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6|confirmed'
-        ]);
 
-        $user->name = request('name');
-        $user->email = request('email');
-        $user->image = request('image');
-        $user->password = bcrypt(request('password'));
+        $except = ['password'];
+
+        $user->fill($request->except($except));
 
         $user->save();
 

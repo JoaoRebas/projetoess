@@ -81,7 +81,7 @@
         </div>
         @endif
         <div class="info">
-          <a href="/profile" class="d-block">{{Auth::user()->name}}</a>
+          <a href="{{route('profile', Auth::user()->id)}}" class="d-block">{{Auth::user()->name}}</a>
         </div>
         @endguest
       </div>

@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('profile')
+@section('content')
 <!-- Content Header (Page header) -->
 <div class="content-header">
   <div class="container-fluid">
@@ -33,7 +33,7 @@
         </div>
         <h3>Personal info</h3>
 
-        <form class="form-horizontal" role="form" action="{{route('update')}}" method="post">
+        <form action="{{route('update', Auth::user()->id)}}" method="post" class="form-group" enctype="multipart/form-data">
           @csrf
           {{ method_field('patch') }}
           <div class="form-group">
