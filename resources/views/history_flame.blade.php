@@ -3,7 +3,7 @@
 @section('content')
 <div class="card">
   <div class="card-header">
-    <h3 class="card-title">Data Table With Full Features</h3>
+    <h3 class="card-title">Alarmes Sensor de Chama</h3>
 </div>
   <!-- /.card-header -->
     <div class="content">
@@ -13,9 +13,7 @@
 
                 <div class="panel panel-default">
 
-                    <div class="panel-heading" >
-                        Alarme Movimento 1
-                    </div>
+
                     @if (count($flame_alarms))
                     <table class="table table-striped">
                         <thead>

@@ -6,7 +6,7 @@
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-12">
-        <h1 class="m-0 text-dark text-center" style="font-size:50px; font-weight:bold; height:100px">Edit Profile</h1>
+        <h1 class="m-0 text-dark text-center" style="font-size:50px; font-weight:bold; height:100px">{{ $user->name }}'s Profile</h1>
       </div><!-- /.col -->
     </div><!-- /.row -->
   </div><!-- /.container-fluid -->
@@ -17,10 +17,11 @@
       <!-- left column -->
       <div class="col-md-3">
         <div class="text-center">
-          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
-          <h6>Upload a different photo...</h6>
-
-          <input id="image" type="file" class="form-control{{ $errors->has('image') ? ' is-invalid' : '' }}" name="image">
+          <img src="/uploads/avatars/{{ $user->avatar }}" style="width:100px; height:100px; float:center; border-radius:50%;">
+        <form action="{{route('update', Auth::user()->id)}}" method="post" class="form-group" enctype="multipart/form-data">
+          @csrf
+          {{ method_field('patch') }}
+          <input type="file" class="form-control{{ $errors->has('image') ? ' is-invalid' : '' }}" name="image">
         </div>
       </div>
 
@@ -33,9 +34,6 @@
         </div>
         <h3>Personal info</h3>
 
-        <form action="{{route('update', Auth::user()->id)}}" method="post" class="form-group" enctype="multipart/form-data">
-          @csrf
-          {{ method_field('patch') }}
           <div class="form-group">
             <label class="col-lg-3 control-label">Name:</label>
             <div class="col-lg-8">

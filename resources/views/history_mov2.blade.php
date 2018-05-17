@@ -3,7 +3,7 @@
 @section('content')
 <div class="card">
   <div class="card-header">
-    <h3 class="card-title">Data Table With Full Features</h3>
+    <h3 class="card-title">Alarmes  Sensor Movimento 2</h3>
 </div>
   <!-- /.card-header -->
     <div class="content">
@@ -13,9 +13,7 @@
 
                 <div class="panel panel-default">
 
-                    <div class="panel-heading" >
-                        Alarme Movimento 2
-                    </div>
+
                     @if (count($mov2_alarms))
                     <table class="table table-striped">
                         <thead>
@@ -32,8 +30,6 @@
                             <td>{{$mov2_alarm->id}}</td>
                             <td>{{$mov2_alarm->value}}</td>
                             <td>{{$mov2_alarm->created_at}}</td>
-
-
 
                         @endforeach
 
