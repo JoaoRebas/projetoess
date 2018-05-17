@@ -19,8 +19,10 @@
         <div class="text-center">
           <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
           <h6>Upload a different photo...</h6>
-
-          <input id="image" type="file" class="form-control{{ $errors->has('image') ? ' is-invalid' : '' }}" name="image">
+        <form action="{{route('update', Auth::user()->id)}}" method="post" class="form-group" enctype="multipart/form-data">
+          @csrf
+          {{ method_field('patch') }}
+          <input type="file" class="form-control{{ $errors->has('image') ? ' is-invalid' : '' }}" name="image">
         </div>
       </div>
 
@@ -33,9 +35,6 @@
         </div>
         <h3>Personal info</h3>
 
-        <form action="{{route('update', Auth::user()->id)}}" method="post" class="form-group" enctype="multipart/form-data">
-          @csrf
-          {{ method_field('patch') }}
           <div class="form-group">
             <label class="col-lg-3 control-label">Name:</label>
             <div class="col-lg-8">

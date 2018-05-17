@@ -71,9 +71,9 @@
           <a class="d-block">Guest</a>
         </div>
         @else
-        @if ((Auth::user()->image)!=null)
+        @if ((Auth::user()->avatar)!=null)
         <div class="image">
-          <img src="{{Auth::user()->image}}" class="img-circle elevation-2" alt="User Image">
+          <img src="/uploads/avatars/{{Auth::user()->avatar}}" class="img-circle elevation-2" alt="User Image">
         </div>
         @else
         <div class="image">
