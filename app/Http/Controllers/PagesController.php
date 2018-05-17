@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class PagesController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -21,12 +21,21 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+    public function getHome()
     {
         return view('home');
     }
 
-    public function user(){
-      return view ('user');
+    public function getProfile(){
+      return view ('profile');
+    }
+
+    public function getHistory(){
+      return view ('history');
+    }
+
+    public function getCamera(){
+      return view ('camera');
     }
 }

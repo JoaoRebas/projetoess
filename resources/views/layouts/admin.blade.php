@@ -71,11 +71,17 @@
           <a class="d-block">Guest</a>
         </div>
         @else
+        @if ((Auth::user()->image)!=null)
         <div class="image">
-          <img src="{{ asset('dist/img/userrebelo- 160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
+          <img src="{{Auth::user()->image}}" class="img-circle elevation-2" alt="User Image">
         </div>
+        @else
+        <div class="image">
+          <img src="{{ asset('dist/img/avatar5.png') }}" class="img-circle elevation-2" alt="User Image">
+        </div>
+        @endif
         <div class="info">
-          <a href="#" class="d-block">João Rebelo</a>
+          <a href="/profile" class="d-block">{{Auth::user()->name}}</a>
         </div>
         @endguest
       </div>
@@ -99,13 +105,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="/home" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Real Time Values</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
+                <a href="/history" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>History</p>
                 </a>
@@ -113,7 +119,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="https://adminlte.io/docs" class="nav-link">
+            <a href="/camera" class="nav-link">
               <i class="nav-icon fa fa-camera"></i>
               <p>Camera</p>
             </a>
@@ -149,6 +155,9 @@
     @yield('guest')
     @else
     @yield('content')
+    @yield('profile')
+    @yield('history')
+    @yield('camera')
     @endguest
   </div>
   <!-- /.content-wrapper -->
