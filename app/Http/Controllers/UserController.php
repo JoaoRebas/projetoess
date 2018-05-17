@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
+
 class UserController extends Controller
 {
     public function __construct()
@@ -51,8 +53,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-      //$user = Auth::user();
-      return view('profile', compact('user'));
+        //$user = Auth::user();
+        return view('profile', compact('user'));
     }
 
     /**
@@ -64,23 +66,21 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-
         $except = ['password'];
-
+        $filename = null;
         $user->fill($request->except($except));
 
-        if($request->hasFile('avatar')){
-          $avatar = $request->file('avatar');
-          $filename = time().'.'.$avatar->getClientOriginalExtension();
-          Image::make($avatar)->resize(100,100)->save(public_path('/uploads/avatars/'.$filename));
-
-          $user = Auth::user();
-          $user->avatar = $filename;
+        if ($request->hasFile('avatar')) {
+            $avatar = $request->file('avatar');
+            $filename = time().'.'.$avatar->getClientOriginalExtension();
+            Image::make($avatar)->resize(100, 100)->save(public_path('/uploads/avatars/'.$filename));
+        }
+        //$user = Auth::user();
+        $user->avatar = $filename;
 
         $user->save();
 
         return back();
-
     }
 
     /**
