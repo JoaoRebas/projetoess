@@ -78,6 +78,7 @@ class UserController extends Controller
           $user->avatar = $filename;
 
         $user->save();
+      }
 
         return back();
 

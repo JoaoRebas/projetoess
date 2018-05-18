@@ -1,6 +1,9 @@
 @extends('layouts.admin')
 
 @section('camera')
+<!-- Slideshow CSS -->
+<link rel="stylesheet" href="{{ asset('plugins/slideshow/slideshow.css') }}">
+
 <!-- Content Header (Page header) -->
 <div class="content-header">
   <div class="container-fluid">
@@ -13,30 +16,70 @@
 </div>
 <!-- /.content-header -->
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-      <img class="d-block img-fluid" src="{{ asset('dist/img/user2-160x160.jpg') }}" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block img-fluid" src="{{ asset('dist/img/user3-128x128.jpg') }}" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block img-fluid" src="{{ asset('dist/img/user4-128x128.jpg') }}" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+ <!-- Full-width images with number and caption text -->
+ <div class="mySlides">
+   <img src="/uploads/camera/cam1.jpg" style="width:100%">
+ </div>
+
+ <div class="mySlides">
+   <img src="/uploads/camera/cam2.jpg" style="width:100%"/>
+ </div>
+
+ <div class="mySlides">
+   <img src="/uploads/camera/cam3.jpg" style="width:100%"/>
+ </div>
+
+ <div class="mySlides">
+   <img src="/uploads/camera/cam4.jpg" style="width:100%"/>
+ </div>
+
+ <div class="mySlides">
+   <img src="/uploads/camera/cam5.jpg" style="width:100%"/>
+ </div>
+
+ <div class="mySlides">
+   <img src="/uploads/camera/cam6.jpg" style="width:100%"/>
+ </div>
+
+ <div class="mySlides">
+   <img src="/uploads/camera/cam7.jpg" style="width:100%"/>
+ </div>
+
+ <div class="mySlides">
+   <img src="/uploads/camera/cam8.jpg" style="width:100%"/>
+ </div>
+
+ <div class="mySlides">
+   <img src="/uploads/camera/cam9.jpg" style="width:100%"/>
+ </div>
+
+ <div class="mySlides">
+   <img src="/uploads/camera/cam10.jpg" style="width:100%"/>
+ </div>
+
+ <!-- Next and previous buttons -->
+ <a id="previous" class="prev" onclick="plusSlides(-1)">&#10094;</a>
+ <a id="next" class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+ <span class="dot" onclick="currentSlide(1)"></span>
+ <span class="dot" onclick="currentSlide(2)"></span>
+ <span class="dot" onclick="currentSlide(3)"></span>
+ <span class="dot" onclick="currentSlide(4)"></span>
+ <span class="dot" onclick="currentSlide(5)"></span>
+ <span class="dot" onclick="currentSlide(6)"></span>
+ <span class="dot" onclick="currentSlide(7)"></span>
+ <span class="dot" onclick="currentSlide(8)"></span>
+ <span class="dot" onclick="currentSlide(9)"></span>
+ <span class="dot" onclick="currentSlide(10)"></span>
+</div>
+
+<!-- Slideshow JS for style-->
+<script src="{{ asset('plugins/slideshow/slideshow.js') }}"></script>
 @endsection

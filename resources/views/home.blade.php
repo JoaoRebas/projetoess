@@ -22,8 +22,8 @@
         <!-- small box -->
         <div class="small-box bg-success" style="height:150px">
           <div class="inner">
-            <h3>Alarm State</h3>
-            <p>Disarmed</p>
+            <h3 style="color:black">Alarm State</h3>
+            <p style="font-size:30px; color:black">Disarmed</p>
           </div>
           <div class="icon">
             <i class="ion ion-home"></i>
@@ -35,10 +35,8 @@
         <!-- small box -->
         <div class="small-box bg-warning">
           <div class="inner">
-            <h3>Movement Sensor 1</h3>
-            <div class="text-left" style="font-size: 100px">
-              <p>No Move Detected</p>
-            </div>
+            <h3 style="color:black">Movement Sensor 1</h3>
+              <p style="font-size:30px; color:black">No Move Detected</p>
           </div>
           <div class="icon">
             <i class="ion ion-speedometer"></i>
@@ -50,8 +48,8 @@
         <!-- small box -->
         <div class="small-box bg-warning">
           <div class="inner">
-            <h3>Movement Sensor 2</h3>
-            <p>No Move Detected</p>
+            <h3 style="color:black">Movement Sensor 2</h3>
+            <p style="font-size:30px; color:black">No Move Detected</p>
           </div>
           <div class="icon">
             <i class="ion ion-speedometer"></i>
@@ -63,8 +61,8 @@
         <!-- small box -->
         <div class="small-box bg-danger">
           <div class="inner">
-            <h3>Flame Sensor</h3>
-            <p>No Flame Detected</p>
+            <h3 style="color:black">Flame Sensor</h3>
+            <p style="font-size:30px; color:black">No Flame Detected</p>
           </div>
           <div class="icon">
             <i class="ion ion-flame"></i>
@@ -77,26 +75,13 @@
         <!-- small box -->
         <div class="small-box bg-info">
           <div class="inner">
-            <h3>Gas Sensor</h3>
-            <p>No Gas Detected</p>
+            <h3 style="color:black">Gas Sensor</h3>
+            <p style="font-size:30px; color:black">No Gas Detected</p>
           </div>
           <div class="icon">
-            <i class="ion ion-warning"></i>
+            <i class="ion ion-cloud"></i>
           </div>
 
-        </div>
-      </div>
-      <!-- ./col -->
-      <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-danger">
-          <div class="inner">
-            <h3>RF</h3>
-            <p>Alarm State:</p>
-          </div>
-          <div class="icon">
-            <i class="ion ion-pie-graph"></i>
-          </div>
         </div>
       </div>
       <!-- ./col -->
