@@ -17,9 +17,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'PagesController@getHome');
-Route::get('/profile', 'PagesController@getProfile');
+
+Route::get('/profile/{user}', 'UserController@edit')->name('profile');
+Route::patch('/profile/{user}', 'UserController@update')->name('update');
+
 Route::get('/history', 'PagesController@getHistory');
 Route::get('/camera', 'PagesController@getCamera');
+
+
+//Route::get('/profile/{user}', 'UserController@edit')
 
 Route::get('users/{user}',  ['as' => 'users.edit', 'uses' => 'UserController@edit']);
 Route::patch('users/{user}/update',  ['as' => 'users.update', 'uses' => 'UserController@update']);

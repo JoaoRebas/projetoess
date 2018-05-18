@@ -59,7 +59,7 @@
         </div>
       </div>
       <!-- ./col -->
-      <div class="col-lg-3 col-6">
+      <div class="col-6">
         <!-- small box -->
         <div class="small-box bg-danger">
           <div class="inner">
@@ -73,7 +73,7 @@
         </div>
       </div>
       <!-- ./col -->
-      <div class="col-lg-3 col-6">
+      <div class="col-6">
         <!-- small box -->
         <div class="small-box bg-info">
           <div class="inner">
@@ -81,22 +81,9 @@
             <p>No Gas Detected</p>
           </div>
           <div class="icon">
-            <i class="ion ion-warning"></i>
+            <i class="ion ion-cloud"></i>
           </div>
 
-        </div>
-      </div>
-      <!-- ./col -->
-      <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-danger">
-          <div class="inner">
-            <h3>RF</h3>
-            <p>Alarm State:</p>
-          </div>
-          <div class="icon">
-            <i class="ion ion-pie-graph"></i>
-          </div>
         </div>
       </div>
       <!-- ./col -->

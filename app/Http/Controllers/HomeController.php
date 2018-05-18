@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
 use Illuminate\Http\Request;
 
-class PagesController extends Controller
+class HomeController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -22,18 +21,12 @@ class PagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-    public function getHome()
+    public function index()
     {
         return view('home');
     }
 
-
-    public function getHistory(){
-      return view ('history');
-    }
-
-    public function getCamera(){
-      return view ('camera');
+    public function user(){
+      return view ('user');
     }
 }

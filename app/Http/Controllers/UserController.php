@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Image;
 class UserController extends Controller
 {
     public function __construct()
@@ -28,7 +29,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-      //
+        //
     }
 
     /**
@@ -50,8 +51,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-      $user = Auth::user();
-      return view('users.profile', compact('user'));
+      //$user = Auth::user();
+      return view('profile', compact('user'));
     }
 
     /**
@@ -61,20 +62,27 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(User $user)
+    public function update(Request $request, User $user)
     {
-      $this->validate(request(), [
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6|confirmed'
-        ]);
 
-        $user->name = request('name');
-        $user->email = request('email');
-        $user->image = request('image');
-        $user->password = bcrypt(request('password'));
+        $except = ['password'];
+
+        $user->fill($request->except($except));
 
         $user->save();
+
+        if($request->hasFile('avatar')){
+          $avatar = $request->file('avatar');
+          $filename = time().'.'.$avatar->getClientOriginalExtension();
+          Image::make($avatar)->resize(100,100)->save(public_path('/uploads/avatars/'.$filename));
+
+          $user = Auth::user();
+          $user->avatar = $filename;
+
+          $user->save();
+        }
+
+
 
         return back();
 
