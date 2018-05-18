@@ -105,15 +105,27 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/home" class="nav-link">
+                <a href="{{route('history_mov1')}}" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>Real Time Values</p>
+                  <p>History Movement Sensor 1</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/history" class="nav-link">
+                <a href="{{route('history_mov2')}}" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>History</p>
+                  <p>History Movement Sensor 2</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('history_flame')}}" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>History Flame Sensor</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('history_gas')}}" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>History Gas Sensor</p>
                 </a>
               </li>
             </ul>
