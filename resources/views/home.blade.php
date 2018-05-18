@@ -57,7 +57,7 @@
         </div>
       </div>
       <!-- ./col -->
-      <div class="col-lg-3 col-6">
+      <div class="col-6">
         <!-- small box -->
         <div class="small-box bg-danger">
           <div class="inner">
@@ -71,7 +71,7 @@
         </div>
       </div>
       <!-- ./col -->
-      <div class="col-lg-3 col-6">
+      <div class="col-6">
         <!-- small box -->
         <div class="small-box bg-info">
           <div class="inner">
