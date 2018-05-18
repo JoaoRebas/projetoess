@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Image;
+use Intervention\Image\Facades\Image;
 class UserController extends Controller
 {
     public function __construct()
@@ -69,8 +69,6 @@ class UserController extends Controller
 
         $user->fill($request->except($except));
 
-        $user->save();
-
         if($request->hasFile('avatar')){
           $avatar = $request->file('avatar');
           $filename = time().'.'.$avatar->getClientOriginalExtension();
@@ -79,10 +77,8 @@ class UserController extends Controller
           $user = Auth::user();
           $user->avatar = $filename;
 
-          $user->save();
-        }
-
-
+        $user->save();
+      }
 
         return back();
 
