@@ -15,18 +15,20 @@
 
 <div class="row">
       <!-- left column -->
-      <div class="col-md-3">
+      <div class="col-md-4 offset-md-4">
         <div class="text-center">
           <img src="/uploads/avatars/{{ $user->avatar }}" style="width:100px; height:100px; float:center; border-radius:50%;">
         <form action="{{route('update', Auth::user()->id)}}" method="post" class="form-group" enctype="multipart/form-data">
           @csrf
           {{ method_field('patch') }}
-          <input type="file" class="form-control{{ $errors->has('image') ? ' is-invalid' : '' }}" name="image">
+          <div class="col-md-6 offset-md-3">
+              <input type="file" class="form-control-file{{ $errors->has('image') ? ' is-invalid' : '' }}" name="avatar">
+          </div>
         </div>
       </div>
 
       <!-- edit form column -->
-      <div class="col-md-9 personal-info">
+      <div class="col-md-6 personal-info offset-md-3">
         <div class="alert alert-info alert-dismissable">
           <a class="panel-close close" data-dismiss="alert">×</a>
           <i class="fa fa-coffee"></i>
@@ -36,25 +38,25 @@
 
           <div class="form-group">
             <label class="col-lg-3 control-label">Name:</label>
-            <div class="col-lg-8">
+            <div class="col-lg-12">
               <input class="form-control" value="{{Auth::user()->name}}" type="text" name="name">
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Email:</label>
-            <div class="col-lg-8">
+            <div class="col-lg-12">
               <input class="form-control" value="{{Auth::user()->email}}" type="email" name="email" readonly>
             </div>
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label">Password:</label>
-            <div class="col-md-8">
+            <div class="col-md-12">
               <input class="form-control" type="password" name="password">
             </div>
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label">Confirm password:</label>
-            <div class="col-md-8">
+            <div class="col-md-12">
               <input class="form-control" type="password" name="password_confirmation">
             </div>
           </div>

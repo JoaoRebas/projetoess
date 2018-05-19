@@ -67,7 +67,6 @@
           <div class="icon">
             <i class="ion ion-flame"></i>
           </div>
-
         </div>
       </div>
       <!-- ./col -->
@@ -81,7 +80,19 @@
           <div class="icon">
             <i class="ion ion-cloud"></i>
           </div>
-
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-12">
+        <!-- small box -->
+        <div class="small-box bg-important">
+          <div class="inner">
+            <h3 style="color:black">RFID Sensor:</h3>
+            <p style="font-size:30px; color:black">OPENED</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-cloud"></i>
+          </div>
         </div>
       </div>
       <!-- ./col -->
