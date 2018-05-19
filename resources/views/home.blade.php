@@ -91,7 +91,7 @@
             <p style="font-size:30px; color:black">OPENED</p>
           </div>
           <div class="icon">
-            <i class="ion ion-cloud"></i>
+            <i class="ion ion-card"></i>
           </div>
         </div>
       </div>

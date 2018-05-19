@@ -21,42 +21,52 @@
 
  <!-- Full-width images with number and caption text -->
  <div class="mySlides">
+   <div class="numbertext">Inserir Hora e Data guardada na BD</div>
    <img src="/uploads/camera/cam1.jpg" style="width:100%">
  </div>
 
  <div class="mySlides">
+   <div class="numbertext">Inserir Hora e Data guardada na BD</div>
    <img src="/uploads/camera/cam2.jpg" style="width:100%"/>
  </div>
 
  <div class="mySlides">
+   <div class="numbertext">Inserir Hora e Data guardada na BD</div>
    <img src="/uploads/camera/cam3.jpg" style="width:100%"/>
  </div>
 
  <div class="mySlides">
+   <div class="numbertext">Inserir Hora e Data guardada na BD</div>
    <img src="/uploads/camera/cam4.jpg" style="width:100%"/>
  </div>
 
  <div class="mySlides">
+   <div class="numbertext">Inserir Hora e Data guardada na BD</div>
    <img src="/uploads/camera/cam5.jpg" style="width:100%"/>
  </div>
 
  <div class="mySlides">
+   <div class="numbertext">Inserir Hora e Data guardada na BD</div>
    <img src="/uploads/camera/cam6.jpg" style="width:100%"/>
  </div>
 
  <div class="mySlides">
+   <div class="numbertext">Inserir Hora e Data guardada na BD</div>
    <img src="/uploads/camera/cam7.jpg" style="width:100%"/>
  </div>
 
  <div class="mySlides">
+   <div class="numbertext">Inserir Hora e Data guardada na BD</div>
    <img src="/uploads/camera/cam8.jpg" style="width:100%"/>
  </div>
 
  <div class="mySlides">
+   <div class="numbertext">Inserir Hora e Data guardada na BD</div>
    <img src="/uploads/camera/cam9.jpg" style="width:100%"/>
  </div>
 
  <div class="mySlides">
+   <div class="numbertext">Inserir Hora e Data guardada na BD</div> <!--$camera->photo-->
    <img src="/uploads/camera/cam10.jpg" style="width:100%"/>
  </div>
 

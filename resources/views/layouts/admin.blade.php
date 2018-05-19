@@ -93,13 +93,21 @@
                with font-awesome or any other icon font library -->
           @guest
           @else
-          <li class="nav-header">DEVICES</li>
+          <li class="nav-header">SENSORS</li>
 
+          <li class="nav-item">
+           <a href="/home" class="nav-link">
+             <i class="nav-icon fa fa-home"></i>
+             <p>
+               Real Time Values
+             </p>
+           </a>
+         </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-home"></i>
+              <i class="nav-icon fa fa-book"></i>
               <p>
-                Sensors
+                History
                 <i class="right fa fa-angle-left"></i>
               </p>
             </a>
@@ -130,6 +138,7 @@
               </li>
             </ul>
           </li>
+          <li class="nav-header">DEVICES</li>
           <li class="nav-item">
             <a href="/camera" class="nav-link">
               <i class="nav-icon fa fa-camera"></i>
