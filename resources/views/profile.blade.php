@@ -18,11 +18,11 @@
       <div class="col-md-4 offset-md-4">
         <div class="text-center">
           <img src="/uploads/avatars/{{ $user->avatar }}" style="width:100px; height:100px; float:center; border-radius:50%;">
-        <form action="{{route('update', Auth::user()->id)}}" method="post" class="form-group" enctype="multipart/form-data">
-          @csrf
-          {{ method_field('patch') }}
+      <form action="{{route('update', Auth::user()->id)}}" method="post" class="form-group" enctype="multipart/form-data">
+        @csrf
+        {{ method_field('patch') }}
           <div class="col-md-6 offset-md-3">
-              <input type="file" class="form-control-file{{ $errors->has('image') ? ' is-invalid' : '' }}" name="avatar">
+            <input type="file" class="form-control-file{{ $errors->has('image') ? ' is-invalid' : '' }}" name="avatar">
           </div>
         </div>
       </div>

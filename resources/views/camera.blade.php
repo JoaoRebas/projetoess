@@ -66,7 +66,7 @@
  </div>
 
  <div class="mySlides">
-   <div class="numbertext">Inserir Hora e Data guardada na BD</div> <!--$camera->photo-->
+   <div class="numbertext"></div> <!--$camera->photo-->
    <img src="/uploads/camera/cam10.jpg" style="width:100%"/>
  </div>
 

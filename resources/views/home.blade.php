@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+<!-- <meta http-equiv="refresh" content="5"> 	Refresh automático -->
 <!-- Content Header (Page header) -->
 <div class="content-header">
   <div class="container-fluid">
@@ -23,7 +24,9 @@
         <div class="small-box bg-success" style="height:150px">
           <div class="inner">
             <h3 style="color:black">Alarm State</h3>
-            <p style="font-size:30px; color:black">Disarmed</p>
+            <p style="font-size:30px; color:black">
+
+            </p>
           </div>
           <div class="icon">
             <i class="ion ion-home"></i>
@@ -36,7 +39,15 @@
         <div class="small-box bg-warning">
           <div class="inner">
             <h3 style="color:black">Movement Sensor 1</h3>
-              <p style="font-size:30px; color:black">No Move Detected</p>
+              <p style="font-size:30px; color:black">
+                <?php
+          				$file = "files/movement_sensor_one_movementone_valor.txt";
+          				if (file_exists($file))
+          					echo(file_get_contents($file));
+          				else
+          					echo("(error: could not obtain data!)");
+          			?>
+              </p>
           </div>
           <div class="icon">
             <i class="ion ion-speedometer"></i>
@@ -49,7 +60,15 @@
         <div class="small-box bg-warning">
           <div class="inner">
             <h3 style="color:black">Movement Sensor 2</h3>
-            <p style="font-size:30px; color:black">No Move Detected</p>
+            <p style="font-size:30px; color:black">
+              <?php
+                $file = "files/movement_sensor_two_movementtwo_valor.txt";
+                if (file_exists($file))
+                  echo(file_get_contents($file));
+                else
+                  echo("(error: could not obtain data!)");
+              ?>
+            </p>
           </div>
           <div class="icon">
             <i class="ion ion-speedometer"></i>
@@ -62,7 +81,9 @@
         <div class="small-box bg-danger">
           <div class="inner">
             <h3 style="color:black">Flame Sensor</h3>
-            <p style="font-size:30px; color:black">No Flame Detected</p>
+            <p style="font-size:30px; color:black">
+
+            </p>
           </div>
           <div class="icon">
             <i class="ion ion-flame"></i>
@@ -75,7 +96,9 @@
         <div class="small-box bg-info">
           <div class="inner">
             <h3 style="color:black">Gas Sensor</h3>
-            <p style="font-size:30px; color:black">No Gas Detected</p>
+            <p style="font-size:30px; color:black">
+
+            </p>
           </div>
           <div class="icon">
             <i class="ion ion-cloud"></i>
@@ -88,7 +111,9 @@
         <div class="small-box bg-important">
           <div class="inner">
             <h3 style="color:black">RFID Sensor:</h3>
-            <p style="font-size:30px; color:black">OPENED</p>
+            <p style="font-size:30px; color:black">
+
+            </p>
           </div>
           <div class="icon">
             <i class="ion ion-card"></i>
