@@ -21,13 +21,9 @@ Route::get('/home', 'PagesController@getHome');
 Route::get('/profile/{user}', 'UserController@edit')->name('profile');
 Route::patch('/profile/{user}', 'UserController@update')->name('update');
 
-
+Route::get('/history', 'PagesController@getHistory');
 Route::get('/camera', 'PagesController@getCamera');
 
-Route::get('history/mov1', 'AlarmController@alarms_movimento_1')->name('history_mov1');
-Route::get('history/mov2', 'AlarmController@alarms_movimento_2')->name('history_mov2');
-Route::get('history/flame', 'AlarmController@alarms_flame')->name('history_flame');
-Route::get('history/gas', 'AlarmController@alarms_gas')->name('history_gas');
 
 //Route::get('/profile/{user}', 'UserController@edit')
 

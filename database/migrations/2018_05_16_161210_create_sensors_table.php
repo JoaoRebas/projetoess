@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCameraTable extends Migration
+class CreateSensorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateCameraTable extends Migration
      */
     public function up()
     {
-        Schema::create('camera', function (Blueprint $table) {
+        Schema::create('sensors', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('photo')->nullable();
+            $table->string('history');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateCameraTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('camera');
+        Schema::dropIfExists('sensors');
     }
 }

@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+<!-- <meta http-equiv="refresh" content="5"> 	Refresh automático -->
 <!-- Content Header (Page header) -->
 <div class="content-header">
   <div class="container-fluid">
@@ -22,8 +23,10 @@
         <!-- small box -->
         <div class="small-box bg-success" style="height:150px">
           <div class="inner">
-            <h3>Alarm State</h3>
-            <p>Disarmed</p>
+            <h3 style="color:black">Alarm State</h3>
+            <p style="font-size:30px; color:black">
+
+            </p>
           </div>
           <div class="icon">
             <i class="ion ion-home"></i>
@@ -35,10 +38,16 @@
         <!-- small box -->
         <div class="small-box bg-warning">
           <div class="inner">
-            <h3>Movement Sensor 1</h3>
-            <div class="text-left" style="font-size: 100px">
-              <p>No Move Detected</p>
-            </div>
+            <h3 style="color:black">Movement Sensor 1</h3>
+              <p style="font-size:30px; color:black">
+                <?php
+          				$file = "files/movement_sensor_one_movementone_valor.txt";
+          				if (file_exists($file))
+          					echo(file_get_contents($file));
+          				else
+          					echo("(error: could not obtain data!)");
+          			?>
+              </p>
           </div>
           <div class="icon">
             <i class="ion ion-speedometer"></i>
@@ -50,8 +59,16 @@
         <!-- small box -->
         <div class="small-box bg-warning">
           <div class="inner">
-            <h3>Movement Sensor 2</h3>
-            <p>No Move Detected</p>
+            <h3 style="color:black">Movement Sensor 2</h3>
+            <p style="font-size:30px; color:black">
+              <?php
+                $file = "files/movement_sensor_two_movementtwo_valor.txt";
+                if (file_exists($file))
+                  echo(file_get_contents($file));
+                else
+                  echo("(error: could not obtain data!)");
+              ?>
+            </p>
           </div>
           <div class="icon">
             <i class="ion ion-speedometer"></i>
@@ -63,13 +80,14 @@
         <!-- small box -->
         <div class="small-box bg-danger">
           <div class="inner">
-            <h3>Flame Sensor</h3>
-            <p>No Flame Detected</p>
+            <h3 style="color:black">Flame Sensor</h3>
+            <p style="font-size:30px; color:black">
+
+            </p>
           </div>
           <div class="icon">
             <i class="ion ion-flame"></i>
           </div>
-
         </div>
       </div>
       <!-- ./col -->
@@ -77,16 +95,35 @@
         <!-- small box -->
         <div class="small-box bg-info">
           <div class="inner">
-            <h3>Gas Sensor</h3>
-            <p>No Gas Detected</p>
+            <h3 style="color:black">Gas Sensor</h3>
+            <p style="font-size:30px; color:black">
+
+            </p>
           </div>
           <div class="icon">
             <i class="ion ion-cloud"></i>
           </div>
-
         </div>
       </div>
       <!-- ./col -->
+<<<<<<< HEAD
+=======
+      <div class="col-12">
+        <!-- small box -->
+        <div class="small-box bg-important">
+          <div class="inner">
+            <h3 style="color:black">RFID Sensor:</h3>
+            <p style="font-size:30px; color:black">
+
+            </p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-card"></i>
+          </div>
+        </div>
+      </div>
+      <!-- ./col -->
+>>>>>>> 0ced999f30deb9dbea6616852d9ba9da28456333
     </div>
     <!-- /.row -->
     <!-- /.row (main row) -->

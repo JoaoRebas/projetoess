@@ -93,43 +93,52 @@
                with font-awesome or any other icon font library -->
           @guest
           @else
-          <li class="nav-header">DEVICES</li>
+          <li class="nav-header">SENSORS</li>
 
+          <li class="nav-item">
+           <a href="/home" class="nav-link">
+             <i class="nav-icon fa fa-home"></i>
+             <p>
+               Real Time Values
+             </p>
+           </a>
+         </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-home"></i>
+              <i class="nav-icon fa fa-book"></i>
               <p>
-                Sensors
+                History
                 <i class="right fa fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('history_mov1')}}" class="nav-link">
+                <a href="" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>History Movement Sensor 1</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('history_mov2')}}" class="nav-link">
+                <a href="" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>History Movement Sensor 2</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('history_flame')}}" class="nav-link">
+                <a href="" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>History Flame Sensor</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('history_gas')}}" class="nav-link">
+                <a href="" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>History Gas Sensor</p>
                 </a>
               </li>
             </ul>
           </li>
+          <li class="nav-header">DEVICES</li>
           <li class="nav-item">
             <a href="/camera" class="nav-link">
               <i class="nav-icon fa fa-camera"></i>

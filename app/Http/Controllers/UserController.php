@@ -1,12 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Intervention\Image\Facades\Image;
-
+use Image;
 class UserController extends Controller
 {
     public function __construct()
@@ -53,8 +51,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //$user = Auth::user();
-        return view('profile', compact('user'));
+      //$user = Auth::user();
+      return view('profile', compact('user'));
     }
 
     /**
@@ -87,6 +85,7 @@ class UserController extends Controller
 
 
         return back();
+
     }
 
     /**
