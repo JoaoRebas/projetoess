@@ -106,8 +106,6 @@
         </div>
       </div>
       <!-- ./col -->
-<<<<<<< HEAD
-=======
       <div class="col-12">
         <!-- small box -->
         <div class="small-box bg-important">
@@ -123,7 +121,6 @@
         </div>
       </div>
       <!-- ./col -->
->>>>>>> 0ced999f30deb9dbea6616852d9ba9da28456333
     </div>
     <!-- /.row -->
     <!-- /.row (main row) -->

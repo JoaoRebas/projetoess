@@ -21,13 +21,9 @@
       <form action="{{route('update', Auth::user()->id)}}" method="post" class="form-group" enctype="multipart/form-data">
         @csrf
         {{ method_field('patch') }}
-<<<<<<< HEAD
-          <input type="file" class="form-control{{ $errors->has('image') ? ' is-invalid' : '' }}" name="avatar">
-=======
           <div class="col-md-6 offset-md-3">
             <input type="file" class="form-control-file{{ $errors->has('image') ? ' is-invalid' : '' }}" name="avatar">
           </div>
->>>>>>> 0ced999f30deb9dbea6616852d9ba9da28456333
         </div>
       </div>
 

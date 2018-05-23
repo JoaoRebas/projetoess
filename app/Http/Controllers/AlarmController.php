@@ -33,26 +33,26 @@ class AlarmController extends Controller
 
     public function createAlarmMov2(Request $request)
     {
-      $alarmMov1 = new AlarmMovimento2();
-      $alarmMov1->fill($request->all());
-      $alarmMov1->created_at = Carbon::now();
-      $alarmMov1->save();
+        $alarmMov1 = new AlarmMovimento2();
+        $alarmMov1->fill($request->all());
+        $alarmMov1->created_at = Carbon::now();
+        $alarmMov1->save();
     }
 
     public function createAlarmFlame(Request $request)
     {
-      $alarmMov1 = new AlarmFlame();
-      $alarmMov1->fill($request->all());
-      $alarmMov1->created_at = Carbon::now();
-      $alarmMov1->save();
+        $alarmMov1 = new AlarmFlame();
+        $alarmMov1->fill($request->all());
+        $alarmMov1->created_at = Carbon::now();
+        $alarmMov1->save();
     }
 
     public function createAlarmGas(Request $request)
     {
-      $alarmMov1 = new AlarmGas();
-      $alarmMov1->fill($request->all());
-      $alarmMov1->created_at = Carbon::now();
-      $alarmMov1->save();
+        $alarmMov1 = new AlarmGas();
+        $alarmMov1->fill($request->all());
+        $alarmMov1->created_at = Carbon::now();
+        $alarmMov1->save();
     }
 
     public function alarms_movimento_1()
