@@ -13,6 +13,12 @@ class CreateAlarmsTable extends Migration
      */
     public function up()
     {
+      Schema::create('alarmState', function (Blueprint $table) {
+          $table->increments('id');
+          $table->integer('value');
+          $table->timestamps();
+      });
+
         Schema::create('alarm_movimento1', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('value');

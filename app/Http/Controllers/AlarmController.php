@@ -6,6 +6,7 @@ use App\AlarmMovimento1;
 use App\AlarmMovimento2;
 use App\AlarmFlame;
 use App\AlarmGas;
+use App\AlarmState;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
@@ -21,6 +22,15 @@ class AlarmController extends Controller
     public function index()
     {
         //
+    }
+
+
+    public function createAlarmState(Request $request)
+    {
+        $alarmMov1 = new AlarmState();
+        $alarmMov1->fill($request->all());
+        $alarmMov1->created_at = Carbon::now();
+        $alarmMov1->save();
     }
 
     public function createAlarmMov1(Request $request)
@@ -55,7 +65,12 @@ class AlarmController extends Controller
         $alarmMov1->save();
     }
 
-    
+
+    public function alarmState()
+    {
+        $alarmStates = AlarmState::All();
+        return view('history_mov1', compact('$alarmStates'));
+    }
 
     public function alarms_movimento_1()
     {

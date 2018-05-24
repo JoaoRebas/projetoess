@@ -28,6 +28,7 @@ Route::get('/historyMov1', 'AlarmController@alarms_movimento_1')->name('history_
 Route::get('/historyMov2', 'AlarmController@alarms_movimento_2')->name('history_mov2');
 Route::get('/historyFlame', 'AlarmController@alarms_flame')->name('history_flame');
 Route::get('/historyGas', 'AlarmController@alarms_gas')->name('history_gas');
+Route::get('/historyAlarmState', 'AlarmController@alarmState')->name('history_state');
 
 
 //Route::get('/profile/{user}', 'UserController@edit')
