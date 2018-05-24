@@ -18,7 +18,7 @@ class AlarmMovimento2 extends Model
                 return 'No Movement Detected';
                 break;
             case '1':
-                return 'Ligado';
+                return 'Movement Detected';
                 break;
 
             default:
