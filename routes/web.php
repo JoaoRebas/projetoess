@@ -15,8 +15,7 @@ Route::get('/', function () {
 })->middleware('guest');
 
 Auth::routes();
-
-Route::get('/home', 'PagesController@getHome');
+//Route::get('/home', 'PagesController@getHome');
 
 Route::get('/profile/{user}', 'UserController@edit')->name('profile');
 Route::patch('/profile/{user}', 'UserController@update')->name('update');
@@ -35,3 +34,5 @@ Route::get('/historyAlarmState', 'AlarmController@alarmState')->name('history_st
 
 Route::get('users/{user}',  ['as' => 'users.edit', 'uses' => 'UserController@edit']);
 Route::patch('users/{user}/update',  ['as' => 'users.update', 'uses' => 'UserController@update']);
+
+Route::get('/home', 'AlarmController@liveAlarms')->name('liveAlarms');

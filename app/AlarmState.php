@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Alarm extends Model
 {
-    protected $table = 'alarm_flame';
+    protected $table = 'alarmState';
     protected $fillable = [
    'id', 'value',
    ];

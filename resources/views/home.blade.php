@@ -24,9 +24,17 @@
         <div class="small-box bg-success" style="height:150px">
           <div class="inner">
             <h3 style="color:black">Alarm State</h3>
-            <p style="font-size:30px; color:black">
 
-            </p>
+
+                <p style="font-size:30px; color:black" >
+                  @if($alarm_State->value == 0)
+                      Disarmed
+                  @else
+                      Armed
+                  @endif
+                </p>
+
+
           </div>
           <div class="icon">
             <i class="ion ion-home"></i>
@@ -39,15 +47,15 @@
         <div class="small-box bg-warning">
           <div class="inner">
             <h3 style="color:black">Movement Sensor 1</h3>
-              <p style="font-size:30px; color:black">
-                <?php
-          				$file = "api/movement_sensor_one_movementone_valor.txt";
-          				if (file_exists($file))
-          					echo(file_get_contents($file));
-          				else
-          					echo("(error: could not obtain data!)");
-          			?>
+
+              <p style="font-size:30px; color:black" >
+                  @if($alarm_Mov1->value == 0)
+                      No Movement Detected
+                  @else
+                      Movement detected
+                  @endif
               </p>
+
           </div>
           <div class="icon">
             <i class="ion ion-speedometer"></i>
@@ -60,15 +68,15 @@
         <div class="small-box bg-warning">
           <div class="inner">
             <h3 style="color:black">Movement Sensor 2</h3>
-            <p style="font-size:30px; color:black">
-              <?php
-                $file = "api/movement_sensor_two_movementtwo_valor.txt";
-                if (file_exists($file))
-                  echo(file_get_contents($file));
-                else
-                  echo("(error: could not obtain data!)");
-              ?>
-            </p>
+
+              <p style="font-size:30px; color:black" >
+                @if($alarm_Mov2->value == 0)
+                    No Movement Detected
+                @else
+                    Movement detected
+                @endif
+              </p>
+
           </div>
           <div class="icon">
             <i class="ion ion-speedometer"></i>
@@ -81,9 +89,15 @@
         <div class="small-box bg-danger">
           <div class="inner">
             <h3 style="color:black">Flame Sensor</h3>
-            <p style="font-size:30px; color:black">
 
-            </p>
+              <p style="font-size:30px; color:black" >
+                @if($alarm_Flame->value == 0)
+                    No Fire Detected
+                @else
+                    Fire detected
+                @endif
+              </p>
+
           </div>
           <div class="icon">
             <i class="ion ion-flame"></i>
@@ -96,9 +110,15 @@
         <div class="small-box bg-info">
           <div class="inner">
             <h3 style="color:black">Gas Sensor</h3>
-            <p style="font-size:30px; color:black">
 
-            </p>
+              <p style="font-size:30px; color:black" >
+                @if($alarm_Gas->value == 0)
+                    No Gas Detected
+                @else
+                    Gas detected
+                @endif
+              </p>
+
           </div>
           <div class="icon">
             <i class="ion ion-cloud"></i>
