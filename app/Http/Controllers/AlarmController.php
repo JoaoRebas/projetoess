@@ -55,6 +55,8 @@ class AlarmController extends Controller
         $alarmMov1->save();
     }
 
+    
+
     public function alarms_movimento_1()
     {
         $mov1_alarms = AlarmMovimento1::All();
