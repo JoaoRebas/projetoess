@@ -4,10 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class AlarmMovimento1 extends Model
+class Alarm extends Model
 {
-    protected $table = 'alarm_movimento1';
-
+    protected $table = 'alarm_flame';
     protected $fillable = [
    'id', 'value',
    ];
@@ -16,10 +15,10 @@ class AlarmMovimento1 extends Model
     {
         switch ($this->value) {
             case '0':
-                return 'No Movement Detected';
+                return 'Not Armed';
                 break;
             case '1':
-                return 'Movement Detected';
+                return 'Armed';
                 break;
 
             default:
