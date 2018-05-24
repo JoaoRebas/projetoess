@@ -41,7 +41,7 @@
             <h3 style="color:black">Movement Sensor 1</h3>
               <p style="font-size:30px; color:black">
                 <?php
-          				$file = "files/movement_sensor_one_movementone_valor.txt";
+          				$file = "api/movement_sensor_one_movementone_valor.txt";
           				if (file_exists($file))
           					echo(file_get_contents($file));
           				else
