@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\DB;
 class AlarmController extends Controller
 {
     
-
-
     public function index()
     {
         //
