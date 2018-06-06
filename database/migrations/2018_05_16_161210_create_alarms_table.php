@@ -51,6 +51,7 @@ class CreateAlarmsTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('alarmState');
         Schema::dropIfExists('alarms_movimento_1');
         Schema::dropIfExists('alarms_movimento_2');
         Schema::dropIfExists('alarms_flame');
