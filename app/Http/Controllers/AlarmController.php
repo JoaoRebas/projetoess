@@ -6,7 +6,7 @@ use App\AlarmMovimento1;
 use App\AlarmMovimento2;
 use App\AlarmFlame;
 use App\AlarmGas;
-use App\Alarm_state;
+use App\AlarmState;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;

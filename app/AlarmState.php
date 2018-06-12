@@ -8,7 +8,7 @@ class AlarmState extends Model
 {
     protected $table = 'alarmstate';
     protected $fillable = [
-   'id','value',
+   'id', 'value',
    ];
 
     public function statusToStr()

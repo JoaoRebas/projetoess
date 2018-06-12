@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-<!-- <meta http-equiv="refresh" content="5"> 	Refresh automático -->
+<meta http-equiv="refresh" content="3">
 <!-- Content Header (Page header) -->
 <div class="content-header">
   <div class="container-fluid">
@@ -21,25 +21,31 @@
     <div class="row">
       <div class="col-12">
         <!-- small box -->
-        <div class="small-box bg-success" style="height:150px">
+        @if($alarm_State->value == 0)
+        <div class="small-box bg-danger" style="height:150px">
           <div class="inner">
             <h3 style="color:black">Alarm State</h3>
-
-
                 <p style="font-size:30px; color:black" >
-                  @if($alarm_State->value == 0)
                       Disarmed
-                  @else
-                      Armed
-                  @endif
                 </p>
-
-
           </div>
           <div class="icon">
             <i class="ion ion-home"></i>
           </div>
         </div>
+        @else
+        <div class="small-box bg-success" style="height:150px">
+          <div class="inner">
+            <h3 style="color:black">Alarm State</h3>
+                <p style="font-size:30px; color:black" >
+                      Armed
+                </p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-home"></i>
+          </div>
+        </div>
+        @endif
       </div>
       <!-- ./col -->
       <div class="col-6">

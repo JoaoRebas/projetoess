@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+<meta http-equiv="refresh" content="3">
 <div class="card">
   <div class="card-header">
     <h3 class="card-title">Alarmes  Sensor Movimento 2</h3>
