@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Alarm extends Model
+class Alarm_state extends Model
 {
     protected $table = 'alarmState';
     protected $fillable = [
-   'id', 'value',
+   'value',
    ];
 
     public function statusToStr()

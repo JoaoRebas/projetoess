@@ -49,10 +49,14 @@
             <h3 style="color:black">Movement Sensor 1</h3>
 
               <p style="font-size:30px; color:black" >
-                  @if($alarm_Mov1->value == 0)
-                      No Movement Detected
+                  @if($alarm_State->value == 0)
+                      No data being received!
                   @else
-                      Movement detected
+                    @if($alarm_Mov1->value == 0)
+                        No Movement Detected
+                    @else
+                        Movement detected
+                    @endif
                   @endif
               </p>
 
@@ -70,10 +74,14 @@
             <h3 style="color:black">Movement Sensor 2</h3>
 
               <p style="font-size:30px; color:black" >
-                @if($alarm_Mov2->value == 0)
-                    No Movement Detected
+                @if($alarm_State->value == 0)
+                    No data being received!
                 @else
-                    Movement detected
+                    @if($alarm_Mov2->value == 0)
+                        No Movement Detected
+                    @else
+                        Movement detected
+                    @endif
                 @endif
               </p>
 
