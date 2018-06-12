@@ -63,7 +63,7 @@ class AlarmController extends Controller
 
     public function liveAlarms()
     {
-        $alarm_State = DB::table('alarmState')
+        $alarm_State = DB::table('alarmstate')
                         ->orderBy('id', 'desc')
                         ->first();
 
