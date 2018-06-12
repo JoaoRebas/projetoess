@@ -22,7 +22,7 @@ class AlarmController extends Controller
 
     public function createAlarmState(Request $request)
     {
-        $alarmState = new Alarm_state();
+        $alarmState = new AlarmState();
         $alarmState->fill($request->all());
         $alarmState->created_at = Carbon::now();
         $alarmState->save();
@@ -90,7 +90,7 @@ class AlarmController extends Controller
 
     public function alarmState()
     {
-        $alarm_states = Alarm_state::All();
+        $alarm_states = AlarmState::All();
         return view('history_state', compact('alarm_states'));
     }
 
