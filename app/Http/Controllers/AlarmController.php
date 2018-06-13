@@ -83,22 +83,7 @@ class AlarmController extends Controller
                         ->orderBy('id', 'desc')
                         ->first();
 
-        // if ($alarm_State->value == 1 && $alarm_Mov1->value == 1)
-        // {
-        //     \Mail::to($user)->send(new AlarmMov1Mail);
-        // }
-        //
-        // if ($alarm_State->value == 1 && $alarm_Mov2->value == 1) {
-        //     \Mail::to($user)->send(new AlarmMov2Mail);
-        // }
-        //
-        // if ($alarm_Flame->value == 1) {
-        //     \Mail::to($user)->send(new AlarmFlameMail);
-        // }
-        //
-        // if ($alarm_Gas->value == 1) {
-        //     \Mail::to($user)->send(new AlarmGasMail);
-        // }
+
 
         return view('home', compact('alarm_State', 'alarm_Mov1', 'alarm_Mov2', 'alarm_Gas', 'alarm_Flame'));
     }
