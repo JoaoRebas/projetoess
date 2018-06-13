@@ -10,14 +10,14 @@ use App\AlarmState;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
+use App\User;
+use App\Mail\AlarmMov1Mail;
+use App\Mail\AlarmMov2Mail;
+use App\Mail\AlarmFlameMail;
+use App\Mail\AlarmGasMail;
 
 class AlarmController extends Controller
 {
-
-    public function index()
-    {
-        //
-    }
 
 
     public function createAlarmState(Request $request)
@@ -61,7 +61,7 @@ class AlarmController extends Controller
     }
 
 
-    public function liveAlarms()
+    public function liveAlarms(User $user)
     {
         $alarm_State = DB::table('alarmstate')
                         ->orderBy('id', 'desc')
@@ -82,6 +82,23 @@ class AlarmController extends Controller
         $alarm_Flame = DB::table('alarm_flame')
                         ->orderBy('id', 'desc')
                         ->first();
+
+        if ($alarm_State->value == 1 && $alarm_Mov1->value == 1)
+        {
+            \Mail::to($user)->send(new AlarmMov1Mail);
+        }
+
+        if ($alarm_State->value == 1 && $alarm_Mov2->value == 1) {
+            \Mail::to($user)->send(new AlarmMov2Mail);
+        }
+
+        if ($alarm_Flame->value == 1) {
+            \Mail::to($user)->send(new AlarmFlameMail);
+        }
+
+        if ($alarm_Gas->value == 1) {
+            \Mail::to($user)->send(new AlarmGasMail);
+        }
 
         return view('home', compact('alarm_State', 'alarm_Mov1', 'alarm_Mov2', 'alarm_Gas', 'alarm_Flame'));
     }
